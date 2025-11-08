@@ -34,6 +34,82 @@ Projelerde sonuç odaklı bir tutum sergiler, hedeflere ulaşmak için proaktif 
 </p>
 
 ---
+# 🧠 Python & Keras ile Beyin Tümörü Tespiti (Xception Modeli)
+
+Bu proje, bir derin öğrenme modeli kullanarak beyin MR görüntülerinde tümörlü ve sağlıklı dokuları sınıflandırmak amacıyla geliştirilmiştir. Model, **Xception** mimarisi temel alınarak ve **Transfer Learning (Aktarımlı Öğrenme)** tekniği kullanılarak Python ve Keras kütüphaneleri ile eğitilmiştir.
+
+---
+
+## 🚀 Projenin Amacı ve Kapsamı
+
+Bu modelin temel amacı, tıbbi görüntüleri analiz ederek radyologlara ve tıp uzmanlarına yönelik bir **karar destek sistemi** için bir prototip oluşturmaktır.
+
+Model, kendisine verilen bir 2D MR görüntüsünü **3 farklı sınıftan** biri olarak sınıflandırmak üzere eğitilmiştir:
+
+* **[Sınıf 1: örn: brain_glioma]**
+* **[Sınıf 2: örn: brain_menin]**
+* **[Sınıf 3: örn: brain_tumor]**
+---
+## 🛠️ Kullanılan Teknolojiler
+
+* **Dil:** Python
+* **Derin Öğrenme:** TensorFlow, Keras
+* **Temel Mimari:** Xception (Transfer Learning)
+* **Veri İşleme & Analiz:** NumPy, Pandas, Scikit-learn (Veri setini bölmek için)
+* **Görüntü İşleme:** OpenCV (cv2)
+* **Görselleştirme:** Matplotlib
+
+---
+
+## 📊 Sonuçlar ve Performans
+
+Model, **Xception** mimarisi ve aktarımlı öğrenme tekniği sayesinde test veriseti (validation set) üzerinde olağanüstü bir başarı göstermiştir.
+
+Modelin ulaştığı en yüksek doğruluk oranı:
+**%99.67**
+
+Aşağıda, modelin eğitim ve doğrulama (validation) setleri üzerindeki doğruluk/kayıp (accuracy/loss) grafiği yer almaktadır.
+
+*(Bu grafiği projenin klasörüne `sonuclar/grafik.png` olarak eklersen, aşağıdaki kod onu otomatik olarak gösterecektir)*
+
+![Model Performans Grafiği](sonuclar/grafik.png)
+
+Aşağıda modelin bir test görüntüsü üzerinde yaptığı örnek bir tahmin yer almaktadır:
+
+*(Tahmin yapılan bir görüntünün ekran resmini `sonuclar/ornek-tahmin.png` olarak eklersen harika olur)*
+
+![Örnek Tahmin](sonuclar/ornek-tahmin.png)
+
+---
+
+## 📁 Veri Seti
+
+Bu projede kullanılan veri seti, **Kaggle** platformundan temin edilmiş, beyin kanseri teşhisine yönelik 3 sınıflı (Glioma, Meningioma, Pituitary) etiketlenmiş MR görüntülerinden oluşmaktadır.
+
+---
+
+## 🏃‍♀️ Nasıl Çalıştırılır?
+
+Bu projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
+
+1.  Depoyu klonlayın:
+    ```bash
+    git clone [https://github.com/](https://github.com/)[Senin-GitHub-Adın]/[Proje-Depo-Adın].git
+    ```
+2.  Proje dizinine gidin:
+    ```bash
+    cd [Proje-Depo-Adın]
+    ```
+3.  Gerekli kütüphaneleri yükleyin:
+    *(Proje klasörüne `requirements.txt` adında bir dosya oluşturup `tensorflow`, `numpy`, `opencv-python` vb. kütüphaneleri içine yazmalısın)*
+    ```bash
+    pip install -r requirements.txt
+    ```
+4.  Modeli eğitmek için:
+    *(Senin kodundaki dosya adını temel aldım)*
+    ```bash
+    python Xception.py
+    ```
 
 ## 📫 Bana Ulaşın
 
